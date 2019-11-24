@@ -1,0 +1,29 @@
+﻿<Window x:Class="App1.redactWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App1"
+        mc:Ignorable="d"
+        Title="Редактирование" Height="302.843" Width="461.171" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="ФИО" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="14" Foreground="#FF6D6D6D"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="25,125,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold" FontSize="14" Foreground="#FF6D6D6D"/>
+        <Label Content="Должность" HorizontalAlignment="Left" Margin="25,75,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" FontSize="14" Foreground="#FF6D6D6D"/>
+        <ComboBox x:Name="post_cb" HorizontalAlignment="Left" Margin="155,75,0,0" VerticalAlignment="Top" Width="275" Height="29" SelectionChanged="post_cb_SelectionChanged" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center">
+            <ComboBoxItem x:Name="admin_item" Content="Администратор" HorizontalAlignment="Left" Width="260.8" FontWeight="Bold" FontSize="14"/>
+            <ComboBoxItem x:Name="uTaker_item" Content="Кладовщик" HorizontalAlignment="Left" Width="260.8" FontWeight="Bold" FontSize="14"/>
+            <ComboBoxItem x:Name="engeener_item" Content="Инженер" HorizontalAlignment="Left" Width="260.8" FontWeight="Bold" FontSize="14"/>
+            <ComboBoxItem x:Name="tester_item" Content="Тестировщик" HorizontalAlignment="Left" Width="260.8" FontWeight="Bold" FontSize="14"/>
+            <ComboBoxItem x:Name="manSales_item" Content="Руководитель отдела продаж" HorizontalAlignment="Left" Width="260.8" FontWeight="Bold" FontSize="14"/>
+            <ComboBoxItem x:Name="manProd_item" Content="Руководитель отдела производства" HorizontalAlignment="Left" Width="260.8" FontWeight="Bold" FontSize="14"/>
+            <ComboBoxItem x:Name="manPurchasing_item" Content="Руководитель отдела закупок" HorizontalAlignment="Left" Width="260.8" FontWeight="Bold" FontSize="14"/>
+        </ComboBox>
+        <TextBox x:Name="login_tb" HorizontalAlignment="Left" Height="29" Margin="155,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" FontWeight="Bold" FontSize="14" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="password_tb" HorizontalAlignment="Left" Height="29" Margin="155,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" FontWeight="Bold" FontSize="14" VerticalContentAlignment="Center" Text="123"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="25,175,0,0" VerticalAlignment="Top" Width="85" FontWeight="Bold" FontSize="14" Foreground="#FF6D6D6D"/>
+        <Button x:Name="redact_btn" Content="Редактировать" HorizontalAlignment="Left" Margin="316,228,0,0" VerticalAlignment="Top" Width="114" Height="24" FontSize="14" FontWeight="Bold" Click="Button_Click"/>
+        <TextBox x:Name="fio_tb" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Margin="155,25,0,0" FontWeight="Bold" VerticalContentAlignment="Center"/>
+
+    </Grid>
+</Window>

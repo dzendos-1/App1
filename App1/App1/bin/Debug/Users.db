@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<ArrayOfDataRow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DataRow>
+    <fio>Тим Бернерс-Ли</fio>
+    <post>Администратор</post>
+    <login>Admin</login>
+    <password>123</password>
+  </DataRow>
+  <DataRow>
+    <fio>Андерсон</fio>
+    <post>Кладовщик</post>
+    <login>v13dfk</login>
+    <password>123</password>
+  </DataRow>
+  <DataRow>
+    <fio>Феррис</fio>
+    <post>Руководитель отдела производства</post>
+    <login>hgtyu</login>
+    <password>123</password>
+  </DataRow>
+  <DataRow>
+    <fio>Арнольд</fio>
+    <post>Тестировщик</post>
+    <login>mega</login>
+    <password>123</password>
+  </DataRow>
+  <DataRow>
+    <fio>Джон</fio>
+    <post>Инженер</post>
+    <login>DJ72_ki</login>
+    <password>123</password>
+  </DataRow>
+  <DataRow>
+    <fio>Брюс</fio>
+    <post>Руководитель отдела закупок</post>
+    <login>Bimah</login>
+    <password>123456</password>
+  </DataRow>
+  <DataRow>
+    <fio>Геральт</fio>
+    <post>Руководитель отдела продаж</post>
+    <login>gwint_1m3</login>
+    <password>123</password>
+  </DataRow>
+</ArrayOfDataRow>

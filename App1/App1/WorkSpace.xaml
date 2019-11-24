@@ -1,0 +1,69 @@
+﻿<Window x:Class="App1.WorkSpace"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App1"
+        mc:Ignorable="d"
+        Title="WorkSpace" Height="452" Width="852.8" MinWidth="800" MinHeight="260">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="779*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Margin="0,0,0.4,-0.6" Grid.ColumnSpan="2">
+            <TabItem x:Name="main_page" Header="Главная" Foreground="#FF6D6D6D" BorderBrush="White" FontWeight="Bold" Background="{x:Null}" Margin="-2,-2,-24.8,-0.2">
+                <Grid x:Name="main_grid" Background="White" Margin="0,-1,0.2,0" Height="206" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Username_lbl" Content="Добро пожаловать, " Margin="30,50,26.2,0" VerticalAlignment="Top" Foreground="#FF6D6D6D" FontSize="20" Height="37" Grid.Column="1"/>
+                    <ProgressBar x:Name="workProgress_pb" Height="29" Margin="268,107,26.2,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="Прогресс выполнения работ" Margin="30,107,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.572,0.586" Foreground="#FF6D6D6D" FontSize="14" Height="29" Grid.Column="1" HorizontalAlignment="Left" Width="220"/>
+                    <Button Content="Выполнить" Margin="0,155,26.2,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Click="Button_Click" Grid.Column="1" Height="19"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Edit_page" Header="Редактирование" Foreground="#FF6D6D6D" BorderBrush="White" FontWeight="Bold" Margin="26.8,-2,-27,0" Background="{x:Null}" Grid.IsSharedSizeScope="True" Visibility="Collapsed">
+                <Grid x:Name="edit_grid" Background="White" Margin="0,0,0.6,-2.8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="967*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="26*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="usersGrid" Margin="0,0,-0.2,52" Grid.ColumnSpan="4" SelectionChanged="usersGrid_SelectionChanged" IsReadOnly="True" FrozenColumnCount="4" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ФИО" Binding="{Binding Path=fio}" MinWidth="200"/>
+                            <DataGridTextColumn Header="Должность" Binding="{Binding Path=post}" MinWidth="110"/>
+                            <DataGridTextColumn Binding="{Binding Path=login}" ClipboardContentBinding="{x:Null}" Header="Логин" MinWidth="100"/>
+                            <DataGridTextColumn Binding="{Binding Path=password}" ClipboardContentBinding="{x:Null}" Header="Пароль" MinWidth="40"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Viewbox Grid.ColumnSpan="3" Margin="0,0,0.4,19" Stretch="Fill" Height="19" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="336">
+                        <Grid Height="19.4" Width="336.2">
+                            <Viewbox Margin="0,0,0.2,0.4" Stretch="Fill" HorizontalAlignment="Right" Width="245" Height="19" VerticalAlignment="Bottom">
+                                <Grid Height="19" Width="244.6">
+                                    <Button x:Name="addUser_btn" Content="Добавить" Margin="0,0,169.6,0" HorizontalAlignment="Right" Width="75" Click="addUser_btn_Click"/>
+                                    <Button x:Name="changeUser_btn" Content="Изменить" Margin="0,0,84.6,0" Width="74" HorizontalAlignment="Right" Click="changeUser_btn_Click"/>
+                                    <Button x:Name="deleteUser_btn" Content="Удалить" Margin="0,0,-0.4,0" VerticalAlignment="Bottom" Height="19" HorizontalAlignment="Right" Width="74" Click="deleteUser_btn_Click"/>
+                                </Grid>
+                            </Viewbox>
+                            <Button x:Name="save_btn" Content="Сохранить изменения" HorizontalAlignment="Right" Width="137" Margin="-61,0,260.2,0.4" Click="save_btn_Click"/>
+                        </Grid>
+                    </Viewbox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="histpg_tb" Header="История" HorizontalAlignment="Left" Width="76" FontWeight="Bold" Margin="29,0,-29,-0.2" Background="{x:Null}" BorderBrush="White" Foreground="#FF6D6D6D" Height="21" VerticalAlignment="Bottom" Visibility="Collapsed">
+                <Grid x:Name="history_page" Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="239*"/>
+                        <ColumnDefinition Width="602*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="hist_block" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="0,0,-0.2,0.2"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="exit_btn" Content="Выйти" VerticalAlignment="Top" Margin="0,1,4.4,0" Background="White" BorderBrush="White" Foreground="#FF6D6D6D" Click="exit_btn_Click" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Right" Width="74"/>
+    </Grid>
+</Window>
